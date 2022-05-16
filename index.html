@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+body {
+  font-family:Quicksand;
+background-image:url("th (3).png");
+color:white;
+
+}
+
+
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+h2{
+    text-align: center;
+    margin: 40px;
+}
+#searchbar{
+	margin-left: 15%;
+	padding:15px;
+	border-radius: 10px;
+}
+
+input[type=text] {
+	width: 30%;
+	-webkit-transition: width 0.15s ease-in-out;
+	transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+		change its width to 100% */
+input[type=text]:focus {
+	width: 50%;
+}
+
+#list{
+	font-size: 1.5em;
+	margin-left: 90px;
+}
+
+.animals{
+display: list-item;
+}
+
+
+p{
+    text-align:center
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+li{
+  color:white;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+    <a href="index copy.html">Our Shop</a>
+  <a href="index copy 3.html">About SDGs</a>
+  <a href="index copy 2.html">Our Team</a>
+  <a href="index copy 4.html">Our Project</a>
+<!-- input tag -->
+<input id="searchbar" onkeyup="search_animal()" type="text"
+name="search" placeholder="Search Topic..">
+
+<!-- ordered list -->
+<a href="index copy 2.html"  style="font-size:large;" class="animals">Support This Project</li>
+<a href="index copy 2.html"  style="font-size:large;" class="animals">About The Topic</li>
+<a href="index copy 4.html"  style="font-size:large;" class="animals">What Are We Doing</li>
+<a href="index copy 3.html" style="font-size:large;" class="animals">Who Are We</a>
+
+</div>
+<span style="font-size:30px;cursor:pointer" class="openbtn" onclick="openNav()">&#9776; Menue</span>
+<h2>HOME</h2>
+
+<p><br>
+  <img src="ankara pepsi.jpeg" height="300px" width="600px"  alt="">  <br><br>
+    The UN (United Nations) Announced The 17 Sustainable Dvelopment Goals That Are:
+    <br>
+    <br>
+    1- No Poverty
+    <br><br>
+    2-Zero Hunger
+    <br><br>
+    3-Good Health And Well Being
+    <br><br>
+    4-Quality Education
+    <br><br>
+    5-Gender Equality
+    <br><br>
+    6-Clean Water And Sanitation
+    <br><br>
+    7-Clean And Affordable Energy
+    <br><br>
+    8-Decent Work And Economic Growth
+    <br><br>
+    9-Industry,Inovation And Infastructure
+    <br><br>
+    10-Reduce Inequalites
+    <br><br>
+    11-Sustainable Cities And Communities
+    <br><br>
+    12-Responsible Consumption And Production
+    <br><br>
+    13- Climate Action
+    <br><br>
+    14-Life Below Water
+    <br><br>
+    15-Life On Land
+    <br><br>
+    16-Peace,Justice And Strong Institutions
+    <br><br>
+    17-Partnership For The Goals
+    <br><br>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0XTBYMfZyrM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<br>
+<p></p>
+<style type = "text/css">
+  .scroll {
+     display:block;
+     border: 1px solid red;
+     padding:5px;
+     margin-top:5px;
+     width:300px;
+     height:50px;
+     overflow:scroll;
+  }
+
+
+.openbtn{
+ position:sticky;
+ position:webkit-sticky;
+ top:0;
+}
+
+  .auto {
+     display:block;
+     border: 1px solid red;
+     padding:5px;
+     margin-top:5px;
+     width:300px;
+     height:50px;
+     overflow:auto;
+  }
+</style>
+
+
+</p>
+
+
+<script>
+// JavaScript code
+function search_animal() {
+	let input = document.getElementById('searchbar').value
+	input=input.toLowerCase();
+	let x = document.getElementsByClassName('animals');
+
+	for (i = 0; i < x.length; i++) {
+		if (!x[i].innerHTML.toLowerCase().includes(input)) {
+			x[i].style.display="none";
+		}
+		else {
+			x[i].style.display="list-item";
+		}
+	}
+}
+
+
+
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</body>
+</html>
